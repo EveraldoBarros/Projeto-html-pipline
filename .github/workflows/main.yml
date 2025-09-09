@@ -1,0 +1,14 @@
+name: Build HTML
+
+on:
+  push:
+    branches: [ main, branch_de_teste ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v3
+      - name: Listar arquivos do projeto
+        run: ls -la
